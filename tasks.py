@@ -17,3 +17,8 @@ def test(c, color=True, passthru=""):
 def check_manifest(c, passthru=""):
     """Check manifest."""
     c.run(f"python -m check_manifest --no-build-isolation {passthru}")
+
+@task
+def clean(c):
+    """Clean."""
+    c.run("rm -rf *.egg-info/ */*.egg-info/ dist/ build/")
