@@ -28,7 +28,7 @@ name = "invenio-subjects-mesh-lite"
 readme = "README.md"
 requires-python = ">=3.8"
 urls = {Repository = "https://github.com/galterlibrary/invenio-subjects-mesh-lite"}
-version = "2023.1.1"
+version = "2023.1.2"
 
 [project.optional-dependencies]
 dev = [
@@ -43,7 +43,7 @@ dev = [
     "pytest-pydocstyle>=2.2.3"
 ]
 
-[project.entry-points.'invenio_rdm_records.fixtures']
+[project.entry-points."invenio_rdm_records.fixtures"]
 invenio_subjects_mesh_lite = "invenio_subjects_mesh_lite.vocabularies"
 
 # Only setuptools usage
