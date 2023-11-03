@@ -79,6 +79,8 @@ Install the project in editable mode with `dev` dependencies in an isolated virt
 
 ```bash
 (venv) pip install -e .[dev]
+# or if using pipenv
+pipenv run pip install -e .[dev]
 ```
 
 Run tests:
@@ -87,10 +89,22 @@ Run tests:
 (venv) invoke test
 # or shorter
 (venv) inv test
+# or if using pipenv
+pipenv run inv test
 ```
 
 Check manifest:
 
 ```bash
 (venv) inv check-manifest
+# or if using pipenv
+pipenv run inv check-manifest
+```
+
+Clean out artefacts:
+
+```bash
+(venv) inv clean
+# or if using pipenv
+pipenv run inv clean
 ```
