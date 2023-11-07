@@ -57,5 +57,6 @@ ignore = [
     "*.gitkeep",
     ".venv/",
     ".editorconfig",
-    ".github/"
+    ".github/",
+    "tasks.py"
 ]
