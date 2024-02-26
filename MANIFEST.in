@@ -15,3 +15,4 @@
 include *.md
 recursive-include invenio_subjects_mesh_lite *.yaml
 recursive-include invenio_subjects_mesh_lite *.jsonl
+recursive-include invenio_subjects_mesh_lite *.csv
