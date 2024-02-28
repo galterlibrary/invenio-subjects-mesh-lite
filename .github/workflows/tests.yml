@@ -3,13 +3,13 @@
 # Copyright (C) 2023-2024 Northwestern University.
 #
 
-name: invenio-subjects-mesh-lite CI
-
 on:
   push:
-    branches: master
+    branches:
+      - master
   pull_request:
-    branches: master
+    branches:
+      - master
   workflow_dispatch:
     inputs:
       reason:
