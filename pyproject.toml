@@ -20,7 +20,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
 ]
 dependencies = [
-    "galter-subjects-utils>=0.3.3,<2.0"
+    "galter-subjects-utils>=0.4.2,<2.0"
 ]
 description = "MeSH subject terms without qualifiers"
 keywords = ["invenio", "inveniordm", "subjects", "MeSH"]
@@ -29,7 +29,7 @@ name = "invenio-subjects-mesh-lite"
 readme = "README.md"
 requires-python = ">=3.8"
 urls = {Repository = "https://github.com/galterlibrary/invenio-subjects-mesh-lite"}
-version = "2024.3.4"
+version = "2024.3.5"
 
 [project.optional-dependencies]
 dev = [
