@@ -60,12 +60,20 @@ In particular, options for `galter_subjects update` allow you to store renamed, 
 
 When a new list of MeSH term comes out, this package should be updated. Here we show how.
 
+**Pre-requisite/Context**
+
+[Install the distribution package for development](#development) before you do anything.
+
+**Commands**
+
+Once you have it installed, you can run the following commands in the isolated virtualenv:
+
 ```bash
 # In this project
 # Download up-to-date listings
-pipenv run invenio galter_subjects mesh download -d /path/to/downloads/storage/ -y YEAR
+(venv) invenio galter_subjects mesh download -d /path/to/downloads/storage/ -y YEAR
 # Generate file containing initial listing
-pipenv run invenio galter_subjects mesh file -d /path/to/downloads/storage/ -y YEAR -f topic -o invenio_subjects_mesh_lite/vocabularies/subjects_mesh.csv
+(venv) invenio galter_subjects mesh file -d /path/to/downloads/storage/ -y YEAR -f topic -o invenio_subjects_mesh_lite/vocabularies/subjects_mesh.csv
 ```
 
 When you are happy with the list, bump the version in `pyproject.toml` and release it.
