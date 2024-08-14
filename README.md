@@ -2,6 +2,10 @@
 
 *MeSH topical subject terms without qualifiers for InvenioRDM*
 
+<a href="https://pypi.org/project/invenio-subjects-mesh-lite/">
+  <img src="https://img.shields.io/pypi/v/invenio-subjects-mesh-lite.svg">
+</a>
+
 Install this extension to get Medical Subject Headings topics without qualifiers into your instance.
 
 If you are looking for a larger MeSH vocabulary with qualifiers, use
@@ -34,11 +38,11 @@ table will be provided to indicate version cross-compatibility.
 
 ## Usage
 
-There are 2 types of users for this package. Instance administrators and package maintainers.
+There are 2 types of users for this package. Instance operators and package maintainers.
 
-### Instance administrators
+### Instance operators
 
-For instance administrators, after you have installed the extension as per the steps above, you will want to reload your instance's fixtures: `pipenv run invenio rdm-records fixtures`. This will install the new terms in your instance.
+For instance operators, after you have installed the extension as per the steps above, you will want to reload your instance's fixtures: `pipenv run invenio rdm-records fixtures`. This will install the new terms in your instance.
 
 Alternatively, or if you want to update your already loaded subjects to a new listing (e.g. from one year's list to another), you can update your instance's MeSH subjects as per below. Updating subjects this way takes care of everything for you: the subjects themselves and the records/drafts using those subjects. **WARNING** This operation can _remove_ subjects.
 
