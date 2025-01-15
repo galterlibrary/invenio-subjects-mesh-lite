@@ -80,6 +80,8 @@ Once you have it installed, you can run the following commands in the isolated v
 (venv) invenio galter_subjects mesh file -d /path/to/downloads/storage/ -y YEAR -f topic -o invenio_subjects_mesh_lite/vocabularies/subjects_mesh.csv
 ```
 
+Sorting the resulting csv is a nice touch for humans to better parse the changes between versions.
+
 When you are happy with the list, bump the version in `pyproject.toml` and release it.
 
 

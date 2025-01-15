@@ -29,7 +29,7 @@ name = "invenio-subjects-mesh-lite"
 readme = "README.md"
 requires-python = ">=3.9"
 urls = {Repository = "https://github.com/galterlibrary/invenio-subjects-mesh-lite"}
-version = "2024.3.6"
+version = "2025.1.15"
 
 [project.optional-dependencies]
 dev = [
