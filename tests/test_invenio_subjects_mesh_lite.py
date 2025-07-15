@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2021-2023 Northwestern University.
+# Copyright (C) 2021-2025 Northwestern University.
 #
 # invenio-subjects-mesh-lite is free software; you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file for more
@@ -10,7 +10,7 @@
 
 from pathlib import Path
 
-import pkg_resources
+import importlib_metadata
 import yaml
 
 
@@ -18,9 +18,7 @@ def test_vocabularies_yaml():
     """Test vocabularies.yaml structure."""
     extensions = [
         ep.load() for ep in
-        # Specifically testing "deprecated" pkg_resources because that's what
-        # InvenioRDM uses.
-        pkg_resources.iter_entry_points('invenio_rdm_records.fixtures')
+        importlib_metadata.entry_points(group='invenio_rdm_records.fixtures')
     ]
 
     assert len(extensions) == 1
