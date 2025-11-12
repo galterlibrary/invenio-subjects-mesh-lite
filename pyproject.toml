@@ -9,7 +9,6 @@ authors = [
 classifiers = [
     "Environment :: Web Environment",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
@@ -19,13 +18,14 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
     "galter-subjects-utils>=0.7.0,<2.0"
 ]
 description = "MeSH subject terms without qualifiers"
 keywords = ["invenio", "inveniordm", "subjects", "MeSH"]
-license = {file = "LICENSE"}
+license = "MIT"
 name = "invenio-subjects-mesh-lite"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -38,7 +38,7 @@ dev = [
     "invenio-search[opensearch2]>=3.0.0,<4.0.0",  # Needs to be specified separately as it's normally up to the instance
     "invoke>=2.2,<3.0",
     "pyyaml>=5.4.1",
-    "pytest-invenio>=2.1.1,<4.0.0",
+    "pytest-invenio>=3.3.0,<4.0.0",
 ]
 
 dev_pre = [
