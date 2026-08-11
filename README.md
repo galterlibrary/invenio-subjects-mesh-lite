@@ -68,11 +68,11 @@ Alternatively, or if you want to update your already loaded subjects to a new li
 ```bash
 # In your instance's project
 # Download up-to-date listings
-pipenv run invenio galter_subjects mesh download -d /path/to/downloads/storage/ -y YEAR
+uv run invenio galter_subjects mesh download -d /path/to/downloads/storage/ -y YEAR
 # Generate file containg deltas to transition your instance to the downloaded listing
-pipenv run invenio galter_subjects mesh deltas -d /path/to/downloads/storage/ -y YEAR -f topic -o deltas_mesh.csv
+uv run invenio galter_subjects mesh deltas -d /path/to/downloads/storage/ -y YEAR -f topic -o deltas_mesh.csv
 # Update your instance - *this operation will modify your instance*
-pipenv run invenio galter_subjects update deltas_mesh.csv
+uv run invenio galter_subjects update deltas_mesh.csv
 ```
 
 Look at the help text for these commands to see additional options that can be passed.
@@ -94,9 +94,9 @@ Once you have it installed, you can run the following commands in the isolated v
 ```bash
 # In this project
 # Download up-to-date listings
-(venv) invenio galter_subjects mesh download -d /path/to/downloads/storage/ -y YEAR
+uv run invenio galter_subjects mesh download -d /path/to/downloads/storage/ -y YEAR
 # Generate file containing initial listing
-(venv) invenio galter_subjects mesh file -d /path/to/downloads/storage/ -y YEAR -f topic -o invenio_subjects_mesh_lite/vocabularies/subjects_mesh.csv
+uv run invenio galter_subjects mesh file -d /path/to/downloads/storage/ -y YEAR -f topic -o invenio_subjects_mesh_lite/vocabularies/subjects_mesh.csv
 ```
 
 Sorting the resulting csv is a nice touch for humans to better parse the changes between versions.
@@ -106,47 +106,26 @@ When you are happy with the list, bump the version in `pyproject.toml` and relea
 
 ## Development
 
-Install the project in editable mode with `dev` dependencies in an isolated virtualenv (`(venv)` denotes that going forward):
+Install the project in editable mode with `dev` dependencies in an isolated virtualenv:
 
 ```bash
-(venv) pip install -e .[dev]
-# or if using pipenv
-pipenv run pip install -e .[dev]
+uv pip install -e .[dev]
 ```
 
 Run tests:
 
 ```bash
-(venv) invoke test
-# or shorter
-(venv) inv test
-# or if using pipenv
-pipenv run inv test
+uv run inv test
 ```
 
 Test compatibility with the pre-release version of InvenioRDM (invenio-app-rdm):
 
 ```bash
-# Step 1 - install the pre-release dependencies
-(venv) pip install --pre -e .[dev_pre]
-# Step 2 - Run the pre-release tests
-(venv) inv test
-# if using uv run:
 uv run --extra dev_pre --prerelease=allow inv test
-```
-
-Check manifest:
-
-```bash
-(venv) inv check-manifest
-# or if using pipenv
-pipenv run inv check-manifest
 ```
 
 Clean out artefacts:
 
 ```bash
-(venv) inv clean
-# or if using pipenv
-pipenv run inv clean
+uv run inv clean
 ```
