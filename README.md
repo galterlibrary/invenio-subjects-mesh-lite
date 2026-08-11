@@ -21,10 +21,8 @@ If you are looking for a larger MeSH vocabulary with qualifiers, use
 From your instance directory:
 
 ```bash
-pipenv install invenio-subjects-mesh-lite
+uv add invenio-subjects-mesh-lite
 ```
-
-This will add it to your Pipfile.
 
 ## Versions
 
