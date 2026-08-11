@@ -1,5 +1,10 @@
 # Changes
 
+Version 2026.1.27.1 (released 2026-08-11)
+
+- Make compatible with InvenioRDM v14
+- Use hatchling build
+
 Version 2026.1.27.0 (released 2026-01-28)
 
 - MeSH 2026
