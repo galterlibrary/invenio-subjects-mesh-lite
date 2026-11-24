@@ -1,5 +1,10 @@
 # Changes
 
+Version 2026.11.24.1 (released 2026-11-24)
+
+*Breaking changes*
+- _Actually_ adopt invenio-subjects-mesh-common 0.5.0 - `invenio galter_subjects mesh deltas` CLI changes
+
 Version 2026.11.24.0 (released 2026-11-24)
 
 *Breaking changes*
